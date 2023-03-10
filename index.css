@@ -1,3 +1,101 @@
 body {
   margin: 0;
+  font-family: 'Smythe', cursive;
+  color: #000000;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5 p {
+  font-weight: 400;
+}
+
+h1, h3 {
+  padding-left: 45px;
+  margin: 8px 0px;
+  color: #FFFFFF;
+}
+
+h1 {
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 27px;
+  margin: 0;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* layout */
+
+.header-container, .menu {
+  width: 620px;
+  margin: 0 auto;
+}
+
+.header-container {
+  height: 167px;
+  padding: 1px;
+  background-image: url("images/bg-burger.png");
+  background-size: cover;
+}
+
+.menu {
+  height: 914px;
+  border: 1px solid red;
+}
+
+.menu-items-container {
+  margin: 0px 46px;
+}
+
+.menu-item-img-container {
+  margin-right: 25px;
+}
+
+.menu-item-description,
+.menu-item-price {
+  margin: 0;
+  padding: 4px 0;
+}
+
+.menu-item-description {
+  color: #8B8B8B
+}
+
+.menu-item-price {
+  font-size: 20px;
+}
+
+.menu-item {
+  display: flex;
+  padding: 50px 0px;
+  border-bottom: 1px solid #D2D2D2;
+}
+
+/* buttons */
+
+.add-btn {
+  width: 50px;
+  height: 50px;
+  border: 1.5px solid #DEDEDE;
+  border-radius: 50%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  font-size: 32px;
+  background: #FFFFFF;
+}
+
+/* utility */
+
+.align-right {
+  margin-left: auto;
 } 
