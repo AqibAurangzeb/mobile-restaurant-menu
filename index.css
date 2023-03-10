@@ -56,7 +56,7 @@ p {
 }
 
 .main-container {
-  height: 952px;
+  height: 980px;
 }
 
 .menu, .order {
@@ -149,6 +149,46 @@ p {
   background: #16DB99;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.complete-order-btn:hover,
+.complete-order-btn:not(:hover) {
+  transition: 0.5s;
+}
+
+.complete-order-btn:hover {
+  background: #059669;
+}
+
+.complete-order-btn:not(:hover) {
+  background-color: #16DB99;
+}
+
+/* modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 540px;
+  height: 540px;
+  background: #FFFFFF;
+  border-radius: 3px;
+}
+
+.modal-active {
+  position: fixed;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000000;
 }
 
 /* utility */
