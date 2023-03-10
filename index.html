@@ -20,8 +20,8 @@
             </div>
         </header>
         <main>
-            <section class="menu">
-                <div class="menu-items-container">
+            <div class="main-container">
+                <section class="menu">
                     <div class="menu-item">
                         <div class="menu-item-img-container">
                             <img src="images/pizza.png" alt="">
@@ -61,8 +61,26 @@
                             <button class="add-btn">+</button>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+                <section class="order">
+                    <h2 class="text-align-center">Your Order</h2>
+                    <div class="ordered-item">
+                        <h4 class="ordered-item-name">Pizza</h4>
+                        <p class="ordered-item-remove">remove</p>
+                        <p class="ordered-item-price align-right">$14</p>
+                    </div>
+                    <div class="ordered-item padding-bottom-20 border-bottom-dark">
+                        <h4 class="ordered-item-name">Beer</h4>
+                        <p class="ordered-item-remove">remove</p>
+                        <p class="ordered-item-price align-right">$12</p>
+                    </div>
+                    <div class="order-total-price-container">
+                        <h2 class="order-total-price-label">Total Price: </h2>
+                        <p class="order-total-price align-right">$26</p>
+                    </div>
+                    <button class="complete-order-btn">Complete order</button>
+                </section>
+            </div>
         </main>
         </div>
 	    <script src="index.js"></script>
