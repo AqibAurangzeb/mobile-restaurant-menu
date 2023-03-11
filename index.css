@@ -126,6 +126,15 @@ p {
   font-size: 20px;
 }
 
+.order-completed-text {
+  text-align: center;
+  padding: 30px 0px;
+  background: #ECFDF5;
+  font-size: 32px;
+  color: #065F46;
+  border-radius: 3px;
+}
+
 /* buttons */
 
 .add-btn {
@@ -152,16 +161,32 @@ p {
   cursor: pointer;
 }
 
+.modal-pay-btn {
+  height: 70px;
+  background: #16DB99;
+  color: #FFFFFF;
+  font-family: Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
 .complete-order-btn:hover,
-.complete-order-btn:not(:hover) {
+.complete-order-btn:not(:hover),
+.modal-pay-btn,
+.modal-pay-btn:not(:hover){
   transition: 0.5s;
 }
 
-.complete-order-btn:hover {
+.complete-order-btn:hover,
+.modal-pay-btn:hover {
   background: #059669;
 }
 
-.complete-order-btn:not(:hover) {
+.complete-order-btn:not(:hover),
+.modal-pay-btn:not(:hover) {
   background-color: #16DB99;
 }
 
@@ -178,7 +203,9 @@ p {
   width: 540px;
   height: 540px;
   background: #FFFFFF;
-  border-radius: 3px;
+  border-radius: 4px;
+  text-align: center;
+  font-family: Verdana, sans-serif;
 }
 
 .modal-active {
@@ -189,6 +216,29 @@ p {
   right: 0;
   bottom: 0;
   background: #000000;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 470px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+input {
+  height: 70px;
+  border: 1.5px solid #757575;
+  border-radius: 4px;
+  padding: 23px;
+  font-size: 20px;
 }
 
 /* utility */

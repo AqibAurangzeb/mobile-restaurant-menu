@@ -62,6 +62,9 @@
                         </div>
                     </div>
                 </section>
+                <!-- <section class="order"> TODO: replace order with this once pay is clicked via JS
+                    <p class="order-completed-text">Thanks, Aqib. Your order is on its way!</p>
+                </section> -->
                 <section class="order">
                     <h2 class="text-align-center">Your Order</h2>
                     <div class="ordered-item">
@@ -83,7 +86,15 @@
             </div>
         </main>
         <div class="modal-overlay" id="modal-overlay"></div>
-        <div class="modal" id="modal"></div>
+        <div class="modal" id="modal">
+            <h2 class="modal-title">Enter card details</h1>
+            <form>
+                <input type="text" name="fullName" placeholder="Enter your name" aria-label="Full name" required>
+                <input type="number" name="cardNumber" placeholder="Enter card number" aria-label="Card number" required>
+                <input type="number" name="cardCvv" placeholder="Enter CVV" aria-label="Card CVV" required>
+                <button class="modal-pay-btn" type="submit">Pay</button>
+            </form>
+        </div>
         </div>
 	    <script src="index.js"></script>
     </body>
