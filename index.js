@@ -29,12 +29,21 @@ paymentForm.addEventListener("submit", handlePayment)
 
 function handleAddBtnClick(menuItemId) {
   const menuItem = getMenuItem(menuItemId)
+  const orderItem = getOrderItem(menuItemId)
 
-  orderArray.unshift({
-    id: uuidv4(),
-    name: menuItem.name,
-    price: menuItem.price
-  })
+  if (!orderItem) {
+    orderArray.unshift({
+      id: uuidv4(),
+      menuItemId: Number(menuItemId),
+      name: menuItem.name,
+      quantity: 1,
+      price: menuItem.price
+    })
+  }
+  else {
+    orderItem.quantity++
+  }
+
 
   renderOrders()
 }
@@ -45,12 +54,25 @@ function getMenuItem(id) {
   })[0]
 }
 
+function getOrderItem(menuItemId) {
+  return orderArray.filter(function(item) {
+    return item.menuItemId === Number(menuItemId)
+  })[0]
+}
+
 function handleRemoveItemClick(orderItemId) {
   const deleteOrderItemIndex = orderArray.map(function(orderItem) {
     return orderItem.id
   }).indexOf(orderItemId)
 
-  orderArray.splice(deleteOrderItemIndex, 1)
+  const orderItem = orderArray[deleteOrderItemIndex]
+
+  if (orderItem.quantity > 1) {
+    orderItem.quantity--
+  }
+  else {
+    orderArray.splice(deleteOrderItemIndex, 1)
+  }
 
   renderOrders()
 }
@@ -117,12 +139,12 @@ function renderOrders() {
   orderArray.forEach(function(menuItem, index, array) {
     orderDom += `
       <div class="ordered-item ${index === array.length -1 ? "padding-bottom-20 border-bottom-dark" : ""}">
-        <h4 class="ordered-item-name">${menuItem.name}</h4>
+        <h4 class="ordered-item-name">${menuItem.name}${menuItem.quantity > 1 ? ` x${menuItem.quantity}` : ""}</h4>
         <p class="ordered-item-remove" data-remove-item-id="${menuItem.id}">remove</p>
-        <p class="ordered-item-price align-right">$${menuItem.price}</p>
+        <p class="ordered-item-price align-right">$${menuItem.price * menuItem.quantity}</p>
       </div>  
     `
-    totalPrice += menuItem.price
+    totalPrice += (menuItem.price * menuItem.quantity)
   })
 
   orderDom += `
