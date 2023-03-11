@@ -56,7 +56,9 @@ p {
 }
 
 .main-container {
-  height: 980px;
+  min-height: 980px;
+  height: auto;
+  margin-bottom: 50px;
 }
 
 .menu, .order {
@@ -104,6 +106,7 @@ p {
   font-family: Verdana, sans-serif;
   font-size: 12px;
   color: #BBBBBB;
+  cursor: pointer;
 }
 
 .ordered-item-price {
@@ -158,7 +161,7 @@ p {
   background: #16DB99;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  margin-bottom: 55px;
 }
 
 .modal-pay-btn {
@@ -171,6 +174,12 @@ p {
   border: none;
   border-radius: 4px;
   margin-top: 20px;
+}
+
+.add-btn,
+.complete-order-btn,
+.modal-pay-btn {
+  cursor: pointer;
 }
 
 .complete-order-btn:hover,
